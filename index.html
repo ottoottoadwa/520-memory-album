@@ -1268,12 +1268,8 @@
             }
         }
 
-        // 页面加载完成后立即尝试播放
+        // 用户首次点击页面时播放音乐
         window.addEventListener('DOMContentLoaded', function() {
-            // 立即尝试播放
-            toggleMusic();
-
-            // 如果自动播放被浏览器阻止，用户点击页面后播放
             document.body.addEventListener('click', function autoPlay() {
                 if (!isPlaying) {
                     toggleMusic();
